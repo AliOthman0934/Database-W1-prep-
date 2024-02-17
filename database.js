@@ -2,15 +2,15 @@ const express = require("express");
 const mysql = require("mysql");
 
 const config = {
-    host: 'localhost', // replace with your MySQL host
-    user: 'root', // replace with your MySQL user
-    password: 'Habibi09341!', // replace with your MySQL password
-    database: 'Recipes', // replace with your desired database name
+    host: 'localhost',
+    user: 'root',
+    password: 'qwertyu',
+    database: 'Recipes',
 };
 
 const connection = mysql.createConnection(config);
 
-// Connect to the MySQL server
+
 connection.connect((err) => {
     if (err) {
         console.error('Error connecting to MySQL:', err.message);
@@ -19,7 +19,7 @@ connection.connect((err) => {
 
     console.log('Connected to MySQL server');
 
-    // Create tables
+
     connection.query(`
     CREATE TABLE IF NOT EXISTS Recipes (
         recipe_id INT PRIMARY KEY AUTO_INCREMENT,
